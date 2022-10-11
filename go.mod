@@ -1,4 +1,4 @@
-module github.com/3vilive/gorm-where-builder
+module github.com/lonchura/gorm-where-builder
 
 go 1.16
 
