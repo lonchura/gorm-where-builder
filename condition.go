@@ -43,7 +43,7 @@ func (c *Condition) BuildConditionSQL(field string) string {
 	case ConditionTypeExtactLike, ConditionTypePrefixLike, ConditionTypeSuffixLike, ConditionTypeContainLike:
 		return fmt.Sprintf("`%s` like ?", field)
 	case ConditionTypeIn:
-		return fmt.Sprintf("`%s` in ?", field)
+		return fmt.Sprintf("`%s` in (?)", field)
 	case ConditionTypeIsNull:
 		return fmt.Sprintf("`%s` is null", field)
 	case ConditionTypeIsNotNull:
